@@ -14,26 +14,26 @@
     <div class="col-sm-4">
       <div class="card">
         <img
-          src="{{ user?.photoUrl }}"
-          alt="{{ user?.knownAs }}"
+          src="{{ photoUrl }}"
+          alt="{{ user.knownAs }}"
           class="card-img-top img-thumbnail"
         />
         <div class="card-body">
           <div>
             <strong>Location:</strong>
-            <p>{{ user?.city }}, {{ user?.country }}</p>
+            <p>{{ user.city }}, {{ user?.country }}</p>
           </div>
           <div>
             <strong>Age:</strong>
-            <p>{{ user?.age }}</p>
+            <p>{{ user.age }}</p>
           </div>
           <div>
             <strong>Last Active:</strong>
-            <p>{{ user?.lastActive }}</p>
+            <p>{{ user.lastActive }}</p>
           </div>
           <div>
             <strong>Member since:</strong>
-            <p>{{ user?.created }}</p>
+            <p>{{ user.created }}</p>
           </div>
         </div>
         <div class="card-footer">
@@ -93,7 +93,7 @@
             </form>
           </tab>
           <tab heading="Edit Photos">
-            <p>Photo edit will go here</p>
+            <app-photo-editor [photos]="user.photos"></app-photo-editor>
           </tab>
         </tabset>
       </div>
